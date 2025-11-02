@@ -1,0 +1,15 @@
+{
+  "name": "backened",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "sampat sarkar",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
