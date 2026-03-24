@@ -18,9 +18,9 @@ app.get('/api/jokes',(req,res)=>{
         "setup": "Why do programmers prefer dark mode?",
         "punchline": "Because the light attracts bugs."
     }];
-    res.send(jokes);
+    res.json(jokes);
 })
 app.listen(port,()=>{
-    console.log(`serve at https://localhost:${port}`);
+    console.log(`serve at http://localhost:${port}`);
     }
-) 
+)
