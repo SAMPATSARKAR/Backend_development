@@ -8,7 +8,7 @@ import axios from 'axios'
 function App() {
   const [jokes,setJokes] = useState([])
   useEffect(()=>{
-    axios.get('/api/jokes')
+    axios.get('/api/jokes')//axios call the backend api
     .then((res)=>{
       setJokes(res.data);
     })
