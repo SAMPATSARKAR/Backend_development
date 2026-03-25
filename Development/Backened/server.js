@@ -4,7 +4,7 @@ const port = process.env.PORT || 3000
 // app.get('/',(req,res)=>{
 //     res.send('server is ready')
 // })
-app.get('/api/jokes',(req,res)=>{
+app.get('/api/jokes',(req,res)=>{//when clients wants to get the data
         const jokes = [
     {
         "id": 1,
