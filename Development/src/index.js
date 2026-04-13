@@ -1,10 +1,18 @@
-import dotenv from "dotenv"
+// import dotenv from "dotenv"
 import mongoose from "mongoose";
 import { DB_NAME } from "./constant.js";
 import connectDB from "./db/index.js";
+// dotenv.config();
+import path from "path";
+import { fileURLToPath } from "url";
+import dotenv from "dotenv";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 dotenv.config({
-    path: "./env"
-})
+  path: path.join(__dirname, "../.env")
+});
 
 connectDB()
 .then(()=>{
@@ -13,16 +21,16 @@ connectDB()
         
     })
     app.on("error",(error)=>{
-            console.log("Error: ",error);
-            throw error
-    
-        })
+        console.log("Error: ",error);
+        throw error
+        
+    })
 })
 .catch((err)=>{
     console.log("MongoDB connection failed!!!", err);
     
 })
-
+// console.log("ENV CHECK:", process.env.MONGODB_URI);
 // // import express from 'express'
 // // const app = express()
 // // ;(async ()=>{
